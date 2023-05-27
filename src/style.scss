@@ -1,0 +1,20 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgb(251, 231, 63);
+	background: linear-gradient(
+		193deg,
+		rgba(251, 231, 63, 1) 0%,
+		rgba(141, 230, 235, 1) 21%,
+		rgba(70, 252, 147, 1) 100%
+	);
+}
