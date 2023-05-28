@@ -12,21 +12,33 @@
 		<title>Vite + TS</title>
 	</head>
 	<body>
-		<div id="app"></div>
+		<div id="ap"></div>
 		<script
 			type="module"
 			src="/src/main.ts"></script>
-		<div class="slide-container">
+		<div class="slider-container">
 			<div class="slides">
 				<div
-					class="slides__item"
-					style="color: red"></div>
+					class="slides__item active"
+					style="background-color: red"></div>
 				<div
 					class="slides__item"
-					style="color: blue"></div>
+					style="background-color: blue"></div>
 				<div
 					class="slides__item"
-					style="color: green"></div>
+					style="background-color: green"></div>
+			</div>
+			<div class="buttons">
+				<span class="buttons__next">&#10095;</span>
+				<span class="buttons__prev">&#10094;</span>
+			</div>
+			<div class="dots">
+				<div class="dots__item active"></div>
+				<div class="dots__item"></div>
+				<div class="dots__item"></div>
+				<div class="dots__item"></div>
+				<div class="dots__item"></div>
+				<div class="dots__item"></div>
 			</div>
 		</div>
 	</body>

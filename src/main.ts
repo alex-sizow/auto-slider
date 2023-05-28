@@ -114,7 +114,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       Click on the Vite and TypeScript logos to learn more
     </p>
   </div>
-  <div class="slider-container">
+  <div class="slider-containe">
   <div class="slider">
     <div class='red'></div>
     <div class='yellow'></div>
