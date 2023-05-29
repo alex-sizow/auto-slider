@@ -79,12 +79,12 @@ for (let i = 0; i < options.slides.length; i++) {
 					style="background-color: ${options.slides[i].color}"><div class="slides__item_text">${options.slides[i].text}</div></div>`;
 }
 
+
+
 document.querySelector<HTMLDivElement>(
 	'#slides',
 )!.innerHTML = `
   ${counter}
 `;
 
-// setupCounter(
-// 	document.querySelector<HTMLButtonElement>('#counter')!,
-// );
+

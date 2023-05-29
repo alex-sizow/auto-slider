@@ -18,7 +18,7 @@ export function slideNext() {
 	slideImages[counter].style.animation =
 		'next1 0.5s ease-in forwards';
 	if (counter >= slideImages.length - 1) {
-		counter = 0;
+		counter = counter;
 	} else {
 		counter++;
 	}
@@ -48,7 +48,7 @@ function timer() {
 	indicators();
 }
 
-const deleteInterval = setInterval(timer, 1000);
+const deleteInterval = setInterval(timer, 2500);
 timer();
 
 const container = document.querySelector(
