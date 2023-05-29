@@ -1,3 +1,5 @@
+import './main.ts';
+
 let slideImages = document.querySelectorAll(
 	'.slides__item',
 ) as HTMLDivElement | any;
