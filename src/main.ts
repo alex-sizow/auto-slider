@@ -79,12 +79,12 @@ for (let i = 0; i < options.slides.length; i++) {
 					style="background-color: ${options.slides[i].color}"><div class="slides__item_text">${options.slides[i].text}</div></div>`;
 }
 
+const element =
+	document.querySelector<HTMLDivElement>('#slides');
 
+element!.style.width = `${options.width}px`;
+element!.style.height = `${options.height}px`;
 
-document.querySelector<HTMLDivElement>(
-	'#slides',
-)!.innerHTML = `
+element!.innerHTML = `
   ${counter}
 `;
-
-

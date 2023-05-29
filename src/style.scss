@@ -21,7 +21,7 @@ body {
 
 .slider-container {
 	position: relative;
-	width: 800px;
+
 	height: 350px;
 	border-radius: 10px;
 	box-shadow: -5px 5px 10px #6ec7b9, 5px -5px 10px #94fffb;
@@ -29,7 +29,7 @@ body {
 		width: 100%;
 		height: calc(100% - 40px);
 		position: relative;
-		border-radius: 10px 10px 0 0;
+		border-radius: 10px;
 		overflow: hidden;
 		&__item {
 			width: 100%;
