@@ -1,39 +1,13 @@
-import { slideNext } from './slider.ts';
 import './style.scss';
-import typescriptLogo from './typescript.svg';
-import viteLogo from '/vite.svg';
-
-const options: object = {
-	/**
-	 * Delay for slide switching
-	 * @type {number}
-	 */
+const options: any = {
 	delay: 2500,
 
-	/**
-	 * Root element css selector
-	 * @required
-	 * @type {string} - css selector
-	 */
 	root: '#slider',
 
-	/**
-	 * Slider's width(no adaptive)
-	 * @type {number}
-	 */
 	width: 750,
 
-	/**
-	 * Slider's height
-	 * @type {number}
-	 */
 	height: 400,
 
-	/**
-	 * List of slides
-	 * @required
-	 * @type {Array<{ color: string, text: string }>} - color in hex, text is a simple string
-	 */
 	slides: [
 		{
 			color: '#c62828',
@@ -98,35 +72,19 @@ const options: object = {
 	],
 };
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-  <div class="slider-containe">
-  <div class="slider">
-    <div class='red'></div>
-    <div class='yellow'></div>
-    <div class='blue'></div>
-  </div>
-  <div class="slider-nav">
-    <button class="prev">Prev</button>
-    <button class="next">Next</button>
-  </div>
-</div>
+let counter = '';
+for (let i = 0; i < options.slides.length; i++) {
+	counter += `<div
+					class="slides__item"
+					style="background-color: ${options.slides[i].color}"><div class="slides__item_text">${options.slides[i].text}</div></div>`;
+}
+
+document.querySelector<HTMLDivElement>(
+	'#slides',
+)!.innerHTML = `
+  ${counter}
 `;
 
-setupCounter(
-	document.querySelector<HTMLButtonElement>('#counter')!,
-);
+// setupCounter(
+// 	document.querySelector<HTMLButtonElement>('#counter')!,
+// );
