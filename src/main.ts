@@ -1,4 +1,4 @@
-import { setupCounter } from './counter.ts';
+import { slideNext } from './slider.ts';
 import './style.scss';
 import typescriptLogo from './typescript.svg';
 import viteLogo from '/vite.svg';
@@ -130,31 +130,3 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 setupCounter(
 	document.querySelector<HTMLButtonElement>('#counter')!,
 );
-
-const slider = document.querySelector('.slider');
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
-const slideWidth = slider.offsetWidth;
-let slideIndex = 0;
-
-prevButton.addEventListener('click', () => {
-	if (slideIndex === 0) {
-		slideIndex = slider.children.length - 1;
-	} else {
-		slideIndex--;
-	}
-	slider.style.transform = `translateX(-${
-		slideIndex * slideWidth
-	}px)`;
-});
-
-nextButton.addEventListener('click', () => {
-	if (slideIndex === slider.children.length - 1) {
-		slideIndex = 0;
-	} else {
-		slideIndex++;
-	}
-	slider.style.transform = `translateX(-${
-		slideIndex * slideWidth
-	}px)`;
-});
