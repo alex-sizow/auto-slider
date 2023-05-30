@@ -1,6 +1,6 @@
 ## Auto-slider
 
-## Demo [Auto-slider](https://zecurion-table.vercel.app/)
+## Demo [Auto-slider](auto-slider-six.vercel.app)
 
 ## !!! Stops on hovering !!!
 
